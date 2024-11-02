@@ -15,7 +15,7 @@ async def gbanlist(client: Client, message: Message):
     users = (SUDO_USER)
     ex = await message.edit_text("`Processing...`")
     if not users:
-        return await ex.edit("No Users have been set yet")
+        return await ex.edit("pahle add to kar bhai kaysa chutiya owner hai mera ")
     gban_list = "**Sudo Users:**\n"
     count = 0
     for i in users:
@@ -46,7 +46,7 @@ async def gmute_user(client: Client, message: Message):
 
     try:
         if user.id in SUDO_USER:
-            return await ex.edit("`User already in sudo`")
+            return await ex.edit("`abe pahle se add hai owner hi chutiya hai`")
         SUDO_USER.append(user.id)
         await ex.edit(f"[{user.first_name}](tg://user?id={user.id}) Added To Sudo Users!")
     
