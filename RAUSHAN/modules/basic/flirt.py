@@ -4,7 +4,6 @@ from pyrogram.types import Message
 from pyrogram import filters, Client
 from config import OWNER_ID
 from config import SUDO_USERS
-from config import CMD_HANDLER as cmd
 from cache.data import FLIRT 
 from RAUSHAN.modules.help import *
 
