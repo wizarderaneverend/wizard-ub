@@ -5,7 +5,7 @@ from pyrogram.types import Message
 from pyrogram import filters, Client
 from config import OWNER_ID
 from config import SUDO_USERS
-from XDB.data import HFLIRT 
+from cache.data import HFLIRT 
 from .help import *
 
 @Client.on_message(
