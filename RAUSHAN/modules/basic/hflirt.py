@@ -16,7 +16,7 @@ async def hflirt(x: Client, e: Message):
 
       if len(NOBI) == 2:
           ok = await x.get_users(NOBI[1])
-          counts = int(NOBI[0])
+          counts = int(NOBI[1])
           for _ in range(counts):
                 reply = choice(HFLIRT)
                 msg = f"[{ok.first_name}](tg://user?id={ok.id}) {reply}"
