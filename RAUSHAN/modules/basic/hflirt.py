@@ -6,7 +6,7 @@ from pyrogram import filters, Client
 from config import OWNER_ID
 from config import SUDO_USERS
 from cache.data import HFLIRT 
-from .help import *
+from RAUSHAN.modules.help import *
 
 @Client.on_message(
     filters.command(["hflirt"], ".") & (filters.me | filters.user(SUDO_USERS))
