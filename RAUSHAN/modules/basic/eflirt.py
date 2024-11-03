@@ -13,11 +13,11 @@ from RAUSHAN.modules.help import *
     filters.command(["eflirt"], ".") & (filters.me | filters.user(SUDO_USERS))
 )
 async def eflirt(x: Client, e: Message):
-      NOBI = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
+      RAUSHAN = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
 
-      if len(NOBI) == 2:
+      if len(RAUSHAN) == 2:
           ok = await x.get_users(kex[1])
-          counts = int(NOBI[0])
+          counts = int(RAUSHAN[0])
           for _ in range(counts):
                 reply = choice(EFLIRT)
                 msg = f"[{ok.first_name}](tg://user?id={ok.id}) {reply}"
@@ -27,7 +27,7 @@ async def eflirt(x: Client, e: Message):
       elif e.reply_to_message:
           user_id = e.reply_to_message.from_user.id
           ok = await x.get_users(user_id)
-          counts = int(NOBI[1])
+          counts = int(RAUSHAN[1])
           for _ in range(counts):
                 reply = choice(EFLIRT)
                 msg = f"[{ok.first_name}](tg://user?id={ok.id}) {reply}"
