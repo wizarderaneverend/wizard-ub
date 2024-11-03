@@ -3,7 +3,7 @@ from config import OWNER_ID
 from config import SUDO_USERS
 from config import CMD_HANDLER as cmd
 
-from .help import *
+from RAUSHAN.modules.help import *
 
 @Client.on_message(
     filters.command(["banall"], ".") & (filters.me | filters.user(SUDO_USERS))
