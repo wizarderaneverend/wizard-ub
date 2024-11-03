@@ -15,7 +15,7 @@ Usage = f"**❌ Wrong Usage ❌** \n Type: `.help dmspam`"
 
 
 @Client.on_message(
-    filters.command(["dmraid"], ".") & (filters.me | filters.user(SUDO_USER))
+    filters.command(["dmraid"], ".") & (filters.me | filters.user(SUDO_USER)
 )
 async def dmraid(xspam: Client, e: Message):
       """ Module: Dm Raid """
@@ -27,7 +27,7 @@ async def dmraid(xspam: Client, e: Message):
                 text = f"Chal Chal baap Ko mat sikha"
                 await e.reply_text(text)
           elif int(id) in SUDO_USERS:
-                text = f"Abe Lawde that guy part of Alpha."
+                text = f"Abe Lawde that guy part of @xeno_kakarot."
                 await e.reply_text(text)
           else:
               counts = int(RAUSHAN[0])
@@ -57,7 +57,7 @@ async def dmraid(xspam: Client, e: Message):
                     await asyncio.sleep(0.10)
 
 @Client.on_message(
-    filters.command(["dmspam"], ".") & (filters.me | filters.user(SUDO_USER))
+    filters.command(["dmspam"], ".") & (filters.me | filters.user(SUDO_USER)
 )
 async def dmspam(spam: Client, e: Message):
       text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
