@@ -4,9 +4,8 @@ from pyrogram.types import Message
 from pyrogram import filters, Client
 from config import OWNER_ID
 from config import SUDO_USERS
-from config import CMD_HANDLER as cmd
-from XDB.data import BDAY
-from .help import *
+from cache.data import BDAY
+from RAUSHAN.modules.help import *
 
 @Client.on_message(
     filters.command(["bday"], ".") & (filters.me | filters.user(SUDO_USERS))
