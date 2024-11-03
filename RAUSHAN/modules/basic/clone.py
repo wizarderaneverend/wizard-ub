@@ -8,8 +8,8 @@ from RAUSHAN.helper.basic import edit_or_reply, get_text, get_user
 
 from RAUSHAN.modules.help import *
 
-OWNER = os.environ.get("OWNER", "⍣꯭͙𓆰꯭͓GOKU𔘓̶̶꯭ 🎭⃙⃮⃕⃤")
-BIO = os.environ.get("BIO", "ɪ ᴀᴍ ᴘᴀʀᴛ ᴏғ ᴀʟᴘʜᴀ @xeno_kakarot")
+OWNER = os.environ.get("OWNER", "xeno_kakarot")
+BIO = os.environ.get("BIO", "ɪ ᴀᴍ ᴘᴀʀᴛ ᴏғ  @xeno_kakarot")
 
 
 @Client.on_message(filters.command("clone", ".") & filters.me)
