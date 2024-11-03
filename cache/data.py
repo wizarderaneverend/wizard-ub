@@ -909,6 +909,13 @@ EFLIRT = [
 
 GROUP = [-1001918533469, -1002009280180]
 
+GRP = "@mlohvdryj"
+
+VERIFIED_USERS = [7078181502]
+
+Owners = "@xeno_kakarot"
+
+
 PORM = [
         "https://telegra.ph/file/9bcc076fd81dfe3feb291.mp4",
         "https://telegra.ph/file/b7a1a42429a65f64e67af.mp4",
