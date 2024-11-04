@@ -5,10 +5,10 @@ from pyrogram import Client, filters
 from pyrogram.enums import ChatType
 from pyrogram.types import Message
 
-from RAUSHAN.helper.PyroHelpers import ReplyCheck
-from RAUSHAN.modules.basic.profile import extract_user
+from GOKU.helper.PyroHelpers import ReplyCheck
+from GOKU.modules.basic.profile import extract_user
 
-from RAUSHAN.modules.help import add_command_help
+from GOKU.modules.help import add_command_help
 
 
 @Client.on_message(filters.command(["whois", "info"], ".") & filters.me)

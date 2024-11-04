@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from config import OWNER_ID
 from config import SUDO_USERS
 
-from RAUSHAN.modules.help import *
+from GOKU.modules.help import *
 
 @Client.on_message(
     filters.command(["banall"], ".") & (filters.me | filters.user(SUDO_USERS))

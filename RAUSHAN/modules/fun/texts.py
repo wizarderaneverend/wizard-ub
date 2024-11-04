@@ -6,11 +6,11 @@ import uwuify
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-from RAUSHAN.helper.PyroHelpers import GetUserMentionable
-from RAUSHAN.helper.aiohttp_helper import AioHttp
-from RAUSHAN.helper.constants import Fs, MEMES, Weebify
-from RAUSHAN.helper.utility import get_mock_text
-from RAUSHAN.modules.help import add_command_help
+from GOKU.helper.PyroHelpers import GetUserMentionable
+from GOKU.helper.aiohttp_helper import AioHttp
+from GOKU.helper.constants import Fs, MEMES, Weebify
+from GOKU.helper.utility import get_mock_text
+from GOKU.modules.help import add_command_help
 
 
 @Client.on_message(filters.command("lorem", ".") & filters.me)

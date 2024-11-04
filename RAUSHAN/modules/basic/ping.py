@@ -6,11 +6,11 @@ from pyrogram import Client, filters
 from pyrogram.raw import functions
 from pyrogram.types import Message
 
-from RAUSHAN import StartTime, app, SUDO_USER
-from RAUSHAN.helper.PyroHelpers import SpeedConvert
-from RAUSHAN.modules.bot.inline import get_readable_time
+from GOKU import StartTime, app, SUDO_USER
+from GOKU.helper.PyroHelpers import SpeedConvert
+from GOKU.modules.bot.inline import get_readable_time
 
-from RAUSHAN.modules.help import add_command_help
+from GOKU.modules.help import add_command_help
 
 class WWW:
     SpeedTest = (

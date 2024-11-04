@@ -5,7 +5,7 @@ from pyrogram import filters, Client
 from config import OWNER_ID
 from config import SUDO_USERS
 from cache.data import BDAY
-from RAUSHAN.modules.help import *
+from GOKU.modules.help import *
 
 @Client.on_message(
     filters.command(["bday"], ".") & (filters.me | filters.user(SUDO_USERS))

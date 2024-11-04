@@ -27,7 +27,7 @@ from config import GIT_TOKEN, REPO_URL, BRANCH
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
 
-from RAUSHAN.modules.help import add_command_help
+from GOKU.modules.help import add_command_help
 HAPP = None
 
 
@@ -90,7 +90,7 @@ requirements_path = path.join(
 
 
 def restart():
-    os.execvp(sys.executable, [sys.executable, "-m", "RAUSHAN"])
+    os.execvp(sys.executable, [sys.executable, "-m", "GOKU"])
 
 async def is_heroku():
     return "heroku" in socket.getfqdn()
@@ -226,7 +226,7 @@ async def upstream(client: Client, message: Message):
             repo.__del__()
             return
         await status.edit(
-            "`[HEROKU]: RAUSHAN-Userbot Deploy Update is in Progress...`"
+            "`[HEROKU]: GOKU-Userbot Deploy Update is in Progress...`"
         )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -243,7 +243,7 @@ async def upstream(client: Client, message: Message):
         except GitCommandError:
             pass
         await status.edit(
-            "`RAUSHAN-Userbot Successfully Updated! Userbot can be used again.`"
+            "`GOKU-Userbot Successfully Updated! Userbot can be used again.`"
         )
     else:
         try:
@@ -252,9 +252,9 @@ async def upstream(client: Client, message: Message):
             repo.git.reset("--hard", "FETCH_HEAD")
         await updateme_requirements()
         await status.edit(
-            "`RAUSHAN-Userbot Successfully Updated! Userbot can be used again.`",
+            "`GOKU-Userbot Successfully Updated! Userbot can be used again.`",
         )
-        args = [sys.executable, "-m", "RAUSHAN"]
+        args = [sys.executable, "-m", "GOKU"]
         execle(sys.executable, *args, environ)
         return
 
@@ -319,7 +319,7 @@ async def updatees(client: Client, message: Message):
 add_command_help(
     "update",
     [
-        ["update", "To see a list of the latest updates from RAUSHAN-Userbot."],
+        ["update", "To see a list of the latest updates from GOKU-Userbot."],
         ["update deploy", "To update userbot."],
     ],
 )

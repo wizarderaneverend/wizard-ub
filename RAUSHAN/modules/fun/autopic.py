@@ -7,9 +7,9 @@ from shutil import copyfile
 from PIL import Image, ImageDraw, ImageFont
 from pyrogram import filters, Client
 
-from RAUSHAN import SUDO_USER
-from RAUSHAN.helper.basic import eor
-from RAUSHAN.modules.help import add_command_help
+from GOKU import SUDO_USER
+from GOKU.helper.basic import eor
+from GOKU.modules.help import add_command_help
 
 
 __XOR = []
@@ -49,7 +49,7 @@ async def _autopic(_, delay):
 @Client.on_message(
     filters.command(["autopic"], ".") & (filters.me | filters.user(SUDO_USER))
 )
-async def autopic_RAUSHAN(_, m):
+async def autopic_GOKU(_, m):
     global __XOR
     arc = await eor(m, "...")
     if bool(__XOR):

@@ -4,9 +4,9 @@ from googlesearch import search
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from RAUSHAN.helper.basic import edit_or_reply
+from GOKU.helper.basic import edit_or_reply
 
-from RAUSHAN.modules.help import *
+from GOKU.modules.help import *
 
 
 def googlesearch(query):

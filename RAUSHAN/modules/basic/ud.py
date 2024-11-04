@@ -3,8 +3,8 @@ from asyncio import sleep
 from pyrogram import filters, Client 
 
 
-from RAUSHAN.helper.aiohttp_helper import AioHttp
-from RAUSHAN.modules.help import add_command_help
+from GOKU.helper.aiohttp_helper import AioHttp
+from GOKU.modules.help import add_command_help
 
 
 def replace_text(text):

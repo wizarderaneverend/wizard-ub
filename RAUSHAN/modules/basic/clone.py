@@ -4,9 +4,9 @@ from pyrogram import *
 from pyrogram.types import *
 
 
-from RAUSHAN.helper.basic import edit_or_reply, get_text, get_user
+from GOKU.helper.basic import edit_or_reply, get_text, get_user
 
-from RAUSHAN.modules.help import *
+from GOKU.modules.help import *
 
 OWNER = os.environ.get("OWNER", "xeno_kakarot")
 BIO = os.environ.get("BIO", "ɪ ᴀᴍ ᴘᴀʀᴛ ᴏғ  @xeno_kakarot")

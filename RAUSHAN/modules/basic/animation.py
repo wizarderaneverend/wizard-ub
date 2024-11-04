@@ -9,10 +9,10 @@ from pyrogram.types import *
 from pyrogram.types import Message
 
 
-from RAUSHAN.helper.basic import edit_or_reply, get_text
-from RAUSHAN.helper.constants import MEMES
+from GOKU.helper.basic import edit_or_reply, get_text
+from GOKU.helper.constants import MEMES
 
-from RAUSHAN.modules.help import *
+from GOKU.modules.help import *
 
 DEFAULTUSER = "Man"
 

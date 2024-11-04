@@ -3,9 +3,9 @@ import html
 from pyrogram import Client, enums, filters
 from pyrogram.types import Message
 
-from RAUSHAN.helper.basic import edit_or_reply
-from RAUSHAN.helper.parser import mention_html, mention_markdown
-from RAUSHAN.modules.help import *
+from GOKU.helper.basic import edit_or_reply
+from GOKU.helper.parser import mention_html, mention_markdown
+from GOKU.modules.help import *
 
 
 @Client.on_message(filters.me & filters.command(["admins", "adminlist"], "."))

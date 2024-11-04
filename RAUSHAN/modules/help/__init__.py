@@ -1,1 +1,1 @@
-from RAUSHAN.modules.help.help import *
+from GOKU.modules.help.help import *

@@ -7,8 +7,8 @@ import traceback
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-from RAUSHAN.database import cli as database
-from RAUSHAN.helper.PyroHelpers import ReplyCheck
+from GOKU.database import cli as database
+from GOKU.helper.PyroHelpers import ReplyCheck
 
 
 @Client.on_message(

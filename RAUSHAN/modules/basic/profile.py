@@ -9,10 +9,10 @@ from time import time
 from pyrogram import Client, filters, enums
 from pyrogram.types import Message
 
-from RAUSHAN import SUDO_USER
-from RAUSHAN.helper.PyroHelpers import ReplyCheck
+from GOKU import SUDO_USER
+from GOKU.helper.PyroHelpers import ReplyCheck
 
-from RAUSHAN.modules.help import add_command_help
+from GOKU.modules.help import add_command_help
 
 flood = {}
 profile_photo = "cache/pfp.jpg"

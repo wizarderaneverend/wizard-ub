@@ -2,10 +2,10 @@ import asyncio
 from pyrogram import Client, filters
 from pyrogram.enums import ChatType, UserStatus
 from pyrogram.types import Message
-from RAUSHAN import SUDO_USER
+from GOKU import SUDO_USER
 from pyrogram.errors.exceptions.flood_420 import FloodWait
 
-from RAUSHAN.modules.help import add_command_help
+from GOKU.modules.help import add_command_help
 
 
 @Client.on_message(

@@ -1,4 +1,4 @@
-from RAUSHAN import app, API_ID, API_HASH
+from GOKU import app, API_ID, API_HASH
 from config import ALIVE_PIC
 from pyrogram import filters
 import os
@@ -38,7 +38,7 @@ async def clone(bot: app, msg: Message):
     try:
         await text.edit("ᴡᴀɪᴛ ʙᴀʙʏ ғᴇᴡ sᴇᴄᴏɴᴅs...💌")
                    # change this Directry according to ur repo
-        client = Client(name="Melody", api_id=API_ID, api_hash=API_HASH, session_string=phone, plugins=dict(root="RAUSHAN/modules"))
+        client = Client(name="Melody", api_id=API_ID, api_hash=API_HASH, session_string=phone, plugins=dict(root="GOKU/modules"))
         await client.start()
         user = await client.get_me()
         await msg.reply(f" ᴊᴀ ᴘᴇʟ ᴅᴇ sᴀʙᴋᴏ   {user.first_name} 💨.")

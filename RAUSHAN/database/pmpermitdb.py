@@ -1,7 +1,7 @@
-from RAUSHAN.database import cli
+from GOKU.database import cli
 import asyncio
 
-collection = cli["RAUSHAN"]["pmpermit"]
+collection = cli["GOKU"]["pmpermit"]
 
 PMPERMIT_MESSAGE = (
    "ᴡᴀʀɴɪɴɢ!⚠️ ᴘʟᴢ ʀᴇᴀᴅ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴄᴀʀᴇꜰᴜʟʟʏ..\n\n"

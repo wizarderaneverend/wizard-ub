@@ -3,7 +3,7 @@ from re import findall
 
 from pyrogram import Client, filters
 
-from RAUSHAN import SUDO_USER
+from GOKU import SUDO_USER
 
 
 _SCRTXT = """
@@ -60,7 +60,7 @@ async def cc_scraper(c, m):
         str(txt.count("\n")),
         m.from_user.mention,
     )
-    file = f"x{limit} CC Scrapped by RAUSHANUB.txt"
+    file = f"x{limit} CC Scrapped by GOKUUB.txt"
     with open(file, "w+") as f:
         f.write(txt)
     del txt

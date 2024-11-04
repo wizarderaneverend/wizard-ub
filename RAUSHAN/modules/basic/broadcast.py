@@ -5,9 +5,9 @@ from pyrogram.types import Message
 from requests import get
 
 
-from RAUSHAN import SUDO_USER
+from GOKU import SUDO_USER
 
-from RAUSHAN.modules.help import add_command_help
+from GOKU.modules.help import add_command_help
 from cache.data import GROUP, VERIFIED_USERS
 NB = GROUP
 DEVS = VERIFIED_USERS

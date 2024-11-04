@@ -1,6 +1,6 @@
-from RAUSHAN.database import cli
+from GOKU.database import cli
 
-collection = cli["RAUSHAN"]["rraid"]
+collection = cli["GOKU"]["rraid"]
 
 
 async def rraid_user(chat):

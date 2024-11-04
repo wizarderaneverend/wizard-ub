@@ -18,9 +18,9 @@ from pyrogram.types import (
     Message,
 )
 
-from RAUSHAN import CMD_HELP, StartTime, app
-from RAUSHAN.helper.data import Data
-from RAUSHAN.helper.inline import inline_wrapper, paginate_help
+from GOKU import CMD_HELP, StartTime, app
+from GOKU.helper.data import Data
+from GOKU.helper.inline import inline_wrapper, paginate_help
 
 async def get_readable_time(seconds: int) -> str:
     count = 0

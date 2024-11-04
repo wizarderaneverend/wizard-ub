@@ -4,8 +4,8 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 
 
-from RAUSHAN.helper.aiohttp_helper import AioHttp
-from RAUSHAN.modules.help import add_command_help
+from GOKU.helper.aiohttp_helper import AioHttp
+from GOKU.modules.help import add_command_help
 
 
 @Client.on_message(filters.command(["unsplash", "pic"], ".") & filters.me)

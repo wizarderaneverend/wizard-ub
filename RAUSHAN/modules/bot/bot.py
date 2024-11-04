@@ -4,10 +4,10 @@ from pyrogram import Client, filters
 from pyrogram.errors import MessageDeleteForbidden
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
-from RAUSHAN import CMD_HELP, app
-from RAUSHAN.helper.data import Data
-from RAUSHAN.helper.inline import cb_wrapper, paginate_help
-from RAUSHAN import ids as users
+from GOKU import CMD_HELP, app
+from GOKU.helper.data import Data
+from GOKU.helper.inline import cb_wrapper, paginate_help
+from GOKU import ids as users
 
 @Client.on_callback_query()
 async def _callbacks(_, callback_query: CallbackQuery):

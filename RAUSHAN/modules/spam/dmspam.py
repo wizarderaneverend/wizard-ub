@@ -1,6 +1,6 @@
 from pyrogram import filters, Client
 from pyrogram.types import *
-from RAUSHAN.modules.help import *
+from GOKU.modules.help import *
 import os
 import sys
 import asyncio
@@ -9,7 +9,7 @@ OWNER_ID = 7078181502
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from cache.data import *
-from RAUSHAN import SUDO_USER
+from GOKU import SUDO_USER
 SUDO_USERS = SUDO_USER
 Usage = f"**❌ Wrong Usage ❌** \n Type: `.help dmspam`"
 
@@ -19,9 +19,9 @@ Usage = f"**❌ Wrong Usage ❌** \n Type: `.help dmspam`"
 )
 async def dmraid(xspam: Client, e: Message):
       """ Module: Dm Raid """
-      RAUSHAN = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
-      if len(RAUSHAN) == 2:
-          ok = await xspam.get_users(RAUSHAN[1])
+      GOKU = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
+      if len(GOKU) == 2:
+          ok = await xspam.get_users(GOKU[1])
           id = ok.id
           if int(id) in VERIFIED_USERS:
                 text = f"Chal Chal baap Ko mat sikha"
@@ -30,7 +30,7 @@ async def dmraid(xspam: Client, e: Message):
                 text = f"Abe Lawde that guy part of @xeno_kakarot."
                 await e.reply_text(text)
           else:
-              counts = int(RAUSHAN[0])
+              counts = int(GOKU[0])
               await e.reply_text("`Dm Raid Strated Successfully`")
               for _ in range(counts):
                     reply = choice(RAID)
@@ -48,7 +48,7 @@ async def dmraid(xspam: Client, e: Message):
                 text = f"Abe Lawde that guy part of Stranger."
                 await e.reply_text(text)
           else:
-              counts = int(RAUSHAN[0])
+              counts = int(GOKU[0])
               await e.reply_text("Dm Raid Strated Successfully")
               for _ in range(counts):
                     reply = choice(RAID)
@@ -61,9 +61,9 @@ async def dmraid(xspam: Client, e: Message):
 )
 async def dmspam(spam: Client, e: Message):
       text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
-      RAUSHAN = text[1:]
-      if len(RAUSHAN) == 2:
-          msg = str(RAUSHAN[1])
+      GOKU = text[1:]
+      if len(GOKU) == 2:
+          msg = str(GOKU[1])
           ok = await spam.get_users(text[0])
           id = ok.id
           if int(id) in VERIFIED_USERS:
@@ -73,7 +73,7 @@ async def dmspam(spam: Client, e: Message):
                 text = f"Abe Lawde that guy part of Alpha."
                 await e.reply_text(text)
           else:
-              counts = int(RAUSHAN[0])
+              counts = int(GOKU[0])
               await e.reply_text("Dm Spam Strated")
               for _ in range(counts):
                     await spam.send_message(id, msg)
@@ -90,7 +90,7 @@ async def dmspam(spam: Client, e: Message):
                 await e.reply_text(text)
           else:
               counts = int(text[0])
-              msg = str(RAUSHAN[0])
+              msg = str(GOKU[0])
               await e.reply_text("☢️ Dm Spam Strated ☢️")
               for _ in range(counts):
                     await spam.send_message(id, msg)

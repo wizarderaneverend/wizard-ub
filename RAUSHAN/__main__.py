@@ -1,15 +1,15 @@
 import asyncio
 import importlib
 from pyrogram import Client, idle
-from RAUSHAN.helper import join
-from RAUSHAN.modules import ALL_MODULES
-from RAUSHAN import clients, app, ids
+from GOKU.helper import join
+from GOKU.modules import ALL_MODULES
+from GOKU import clients, app, ids
 
 async def start_bot():
     await app.start()
     print("LOG: Founded Bot token Booting Zeus.")
     for all_module in ALL_MODULES:
-        importlib.import_module("RAUSHAN.modules" + all_module)
+        importlib.import_module("GOKU.modules" + all_module)
         print(f"Successfully Imported {all_module} 💥")
     for cli in clients:
         try:

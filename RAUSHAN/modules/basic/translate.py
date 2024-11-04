@@ -1,9 +1,9 @@
-from RAUSHAN.modules.help import *
+from GOKU.modules.help import *
 import os
 from pyrogram import filters, Client
 from pyrogram.types import Message
 from py_trans import Async_PyTranslator
-from RAUSHAN.helper.utility import get_arg
+from GOKU.helper.utility import get_arg
 
 
 

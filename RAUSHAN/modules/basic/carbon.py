@@ -5,9 +5,9 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 
-from RAUSHAN.helper.PyroHelpers import ReplyCheck
+from GOKU.helper.PyroHelpers import ReplyCheck
 
-from RAUSHAN.modules.help import add_command_help
+from GOKU.modules.help import add_command_help
 
 
 async def make_carbon(code):

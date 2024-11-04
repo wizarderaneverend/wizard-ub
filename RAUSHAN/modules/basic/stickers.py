@@ -27,9 +27,9 @@ from pyrogram.raw.functions.messages import GetStickerSet
 from pyrogram.raw.types import InputStickerSetShortName
 from pyrogram.types import Message
 
-from RAUSHAN.helper.PyroHelpers import ReplyCheck
+from GOKU.helper.PyroHelpers import ReplyCheck
 
-from RAUSHAN.modules.help import add_command_help
+from GOKU.modules.help import add_command_help
 
 
 async def add_text_img(image_path, text):

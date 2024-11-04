@@ -5,11 +5,11 @@ from platform import python_version
 from pyrogram import __version__, filters, Client
 from pyrogram.types import Message
 from config import ALIVE_PIC, ALIVE_TEXT
-from RAUSHAN import START_TIME
-from RAUSHAN import SUDO_USER
-from RAUSHAN.helper.PyroHelpers import ReplyCheck
-from RAUSHAN.modules.help import add_command_help
-from RAUSHAN.modules.bot.inline import get_readable_time
+from GOKU import START_TIME
+from GOKU import SUDO_USER
+from GOKU.helper.PyroHelpers import ReplyCheck
+from GOKU.modules.help import add_command_help
+from GOKU.modules.bot.inline import get_readable_time
 
 alive_logo = ALIVE_PIC or "https://graph.org/file/c6a2ed96648fd03377dc9.jpg"
 

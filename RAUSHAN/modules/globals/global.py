@@ -1,11 +1,11 @@
 from pyrogram import Client, errors, filters
 from pyrogram.types import ChatPermissions, Message
 DEVS = [7526369190, 7078181502]
-from RAUSHAN.helper.PyroHelpers import get_ub_chats
-from RAUSHAN.modules.basic.profile import extract_user, extract_user_and_reason
-from RAUSHAN.database import gbandb as RAUSHAN
-from RAUSHAN.database import gmutedb as Gmute
-from RAUSHAN.modules.help import add_command_help
+from GOKU.helper.PyroHelpers import get_ub_chats
+from GOKU.modules.basic.profile import extract_user, extract_user_and_reason
+from GOKU.database import gbandb as GOKU
+from GOKU.database import gmutedb as Gmute
+from GOKU.modules.help import add_command_help
 
 ok = []
 
@@ -28,7 +28,7 @@ async def gban_user(client: Client, message: Message):
         except Exception:
             return await ex.edit("`Please specify a valid user!`")
 
-    if (await RAUSHAN.gban_info(user.id)):
+    if (await GOKU.gban_info(user.id)):
         return await ex.edit(
             f"[user](tg://user?id={user.id}) **it's already on the gbanned list**"
         )
@@ -43,7 +43,7 @@ async def gban_user(client: Client, message: Message):
             done += 1
         except BaseException:
             er += 1
-    await RAUSHAN.gban_user(user.id)
+    await GOKU.gban_user(user.id)
     ok.append(user.id)
     msg = (
         r"**\\#GBanned_User//**"
@@ -72,7 +72,7 @@ async def ungban_user(client: Client, message: Message):
             return await ex.edit("`Please specify a valid user!`")
 
     try:
-        if not (await RAUSHAN.gban_info(user.id)):
+        if not (await GOKU.gban_info(user.id)):
             return await ex.edit("`User already ungban`")
         ung_chats = await get_ub_chats(client)
         ok.remove(user.id)
@@ -86,7 +86,7 @@ async def ungban_user(client: Client, message: Message):
                 done += 1
             except BaseException:
                 er += 1
-        await RAUSHAN.ungban_user(user.id)
+        await GOKU.ungban_user(user.id)
         msg = (
             r"**\\#UnGbanned_User//**"
             f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})"
@@ -103,7 +103,7 @@ async def ungban_user(client: Client, message: Message):
 
 @Client.on_message(filters.command("listgban", ".") & filters.me)
 async def gbanlist(client: Client, message: Message):
-    users = (await RAUSHAN.gban_list())
+    users = (await GOKU.gban_list())
     ex = await message.edit_text("`Processing...`")
     if not users:
         return await ex.edit("No Users have been Banned yet")
@@ -229,7 +229,7 @@ if ok:
     chat_id = message.chat.id
     if not user_id:
         return
-    if (await RAUSHAN.gban_info(user_id)):
+    if (await GOKU.gban_info(user_id)):
         try:
             await client.ban_chat_member(chat_id, user_id)
         except BaseException:

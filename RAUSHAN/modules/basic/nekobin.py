@@ -1,4 +1,4 @@
-from RAUSHAN.modules.help import add_command_help
+from GOKU.modules.help import add_command_help
 import asyncio
 import requests
 import aiohttp
@@ -10,7 +10,7 @@ import re
 
 from pyrogram.types import Message
 from httpx import AsyncClient
-from RAUSHAN.helper.utility import get_arg
+from GOKU.helper.utility import get_arg
 
 
 # Pastebins

@@ -5,8 +5,8 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 
 
-from RAUSHAN.helper.PyroHelpers import GetChatID, ReplyCheck
-from RAUSHAN.modules.help import add_command_help
+from GOKU.helper.PyroHelpers import GetChatID, ReplyCheck
+from GOKU.modules.help import add_command_help
 
 
 @Client.on_message(filters.command(["pat", "pats"], ".") & filters.me)

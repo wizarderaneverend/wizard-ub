@@ -4,8 +4,8 @@ import random
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-from RAUSHAN.helper.PyroHelpers import ReplyCheck
-from RAUSHAN.modules.help import add_command_help
+from GOKU.helper.PyroHelpers import ReplyCheck
+from GOKU.modules.help import add_command_help
 
 sticker_data = {
     "mock": {

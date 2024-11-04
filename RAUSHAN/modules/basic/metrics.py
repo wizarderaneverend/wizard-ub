@@ -3,7 +3,7 @@ import time
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-from RAUSHAN.modules.help import add_command_help
+from GOKU.modules.help import add_command_help
 
 
 class Custom(dict):

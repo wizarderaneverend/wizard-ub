@@ -4,9 +4,9 @@ from prettytable import PrettyTable
 from pyrogram import Client, enums, filters
 from pyrogram.types import Message
 
-from RAUSHAN import app, CMD_HELP
-from RAUSHAN.helper.PyroHelpers import ReplyCheck
-from RAUSHAN.helper.utility import split_list
+from GOKU import app, CMD_HELP
+from GOKU.helper.PyroHelpers import ReplyCheck
+from GOKU.helper.utility import split_list
 
 
 async def edit_or_reply(message: Message, *args, **kwargs) -> Message:
@@ -80,7 +80,7 @@ async def module_helper(client: Client, message: Message):
     elif not message.reply_to_message and len(cmd) == 1:
         ac = PrettyTable()
         ac.header = False
-        ac.title = "RAUSHAN-UserBot Plugins"
+        ac.title = "GOKU-UserBot Plugins"
         ac.align = "l"
         for x in split_list(sorted(CMD_HELP.keys()), 2):
             ac.add_row([x[0], x[1] if len(x) >= 2 else None])

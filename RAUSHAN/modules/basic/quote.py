@@ -3,9 +3,9 @@ import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from RAUSHAN.helper.utility import get_arg
+from GOKU.helper.utility import get_arg
 
-from RAUSHAN.modules.help import add_command_help
+from GOKU.modules.help import add_command_help
 
 
 @Client.on_message(filters.me & filters.command(["q", "quotly"], "."))

@@ -2,9 +2,9 @@ from aiohttp.client_exceptions import ClientError
 from pyrogram import filters, Client 
 from pyrogram.types import Message
 
-from RAUSHAN import SUDO_USER
-from RAUSHAN.helper.aiohttp_helper import AioHttp
-from RAUSHAN.modules.help import add_command_help
+from GOKU import SUDO_USER
+from GOKU.helper.aiohttp_helper import AioHttp
+from GOKU.modules.help import add_command_help
 
 text_apis_data = {
     "compliment": {
