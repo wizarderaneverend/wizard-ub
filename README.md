@@ -49,3 +49,8 @@
 
 
 - <b> sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [𝖳HE kakarot MUSIC™](https://github.com/Gokukhan1) ғᴏʀ [𝖳HE kakarot user bot](https://github.com/Gokukhan1/userbot) </b>
+
+
+### This is a Public UserBot Made by 
+- [Xeno Kakarot](https://t.me/Xeno_Kakarot)
+- [Planet Sadala](https://t.me/mlohvdryj)
