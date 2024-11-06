@@ -5,7 +5,7 @@ import humanize
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-from GOKU.nxtgenhelper.PyroHelpers import GetChatID, ReplyCheck
+from GOKU.helper.PyroHelpers import GetChatID, ReplyCheck
 
 
 AFK = False
