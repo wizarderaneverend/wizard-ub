@@ -6,6 +6,7 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 
 from GOKU.helper.PyroHelpers import GetChatID, ReplyCheck
+from GOKU.modules.help import add_command_help
 
 
 AFK = False
@@ -95,7 +96,7 @@ async def afk_set(bot: Client, message: Message):
     await message.delete()
 
 
-@Client.on_message(filters.command("afk", "!") & filters.me, group=3)
+@Client.on_message(filters.command("live", ".") & filters.me, group=3)
 async def afk_unset(bot: Client, message: Message):
     global AFK, AFK_TIME, AFK_REASON, USERS, GROUPS
 
@@ -134,3 +135,10 @@ if AFK:
            await reply.delete()
 
 
+add_command_help(
+    "afk",
+    [
+        [".afk", "Activates AFK mode with reason as anything after .afk\nUsage: ```.afk <reason>```"],
+        ["!afk", "Deactivates AFK mode."],
+    ],
+)
