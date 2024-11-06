@@ -6,7 +6,7 @@ from pyrogram.types import Message
 from config import CMD_HANDLER
 from GOKU.helper.basic import edit_or_reply
 from GOKU.helper.parser import mention_html, mention_markdown
-from .help import *
+from GOKU.modules.help import *
 
 @Client.on_message(filters.command(["zombies"], cmd) & filters.me)
 
