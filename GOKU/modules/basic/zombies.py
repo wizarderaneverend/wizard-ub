@@ -7,7 +7,7 @@ from GOKU.helper.basic import edit_or_reply
 from GOKU.helper.parser import mention_html, mention_markdown
 from GOKU.modules.help import *
 
-@Client.on_message(filters.command(["zombies"], cmd) & filters.me)
+@Client.on_message(filters.command(["zombies"], ".") & filters.me)
 
 async def kickdel_cmd(client: Client, message: Message):
     # Send initial message indicating action
