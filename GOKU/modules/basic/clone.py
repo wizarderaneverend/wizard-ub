@@ -9,7 +9,7 @@ from GOKU.helper.basic import edit_or_reply, get_text, get_user
 from GOKU.modules.help import *
 
 OWNER = os.environ.get("OWNER", "xeno_kakarot")
-BIO = os.environ.get("BIO", "ɪ ᴀᴍ ᴘᴀʀᴛ ᴏғ  @xeno_kakarot")
+BIO = os.environ.get("BIO", "that is a part of team sadala ( @xeno_kakarot )")
 
 
 @Client.on_message(filters.command("clone", ".") & filters.me)
