@@ -1,3 +1,8 @@
+# made my @xeno_kakarot
+# bahen ke land agar credit liya to maa chod dunga mera code hai 
+
+
+
 from pyrogram import Client, filters
 from config import OWNER_ID
 from config import SUDO_USERS
