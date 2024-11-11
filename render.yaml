@@ -1,12 +1,12 @@
 services:
   - type: web
     plan: free
-    name: RAUSHAN
+    name: GOKU
     env: python
     buildCommand: pip install -U -r requirements.txt
-    startCommand: python3 server.py & python3 -m RAUSHAN  
+    startCommand: python3 server.py & python3 -m GOKU  
  repo:
-https://github.com/TEAMPURVI/ALPHA_USERBOT    
+https://github.com/Gokukhan1/Gokubot   
     branch: main
     envVars:
       - key: SUDO_USERS 
