@@ -10,7 +10,7 @@ API_ID = int(getenv("API_ID", "27079591")) #optional
 API_HASH = getenv("API_HASH", "c81ae4c3dc026ea4bf49842a8ce4a5f9") #optional
 
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "6346273488").split()))
-OWNER_ID = int(getenv("OWNER_ID"))
+OWNER_ID = int(getenv("OWNER_ID", "7078181502"))
 MONGO_URL = getenv("MONGO_URL")
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 ALIVE_PIC = getenv("ALIVE_PIC", 'https://files.catbox.moe/ppms0p.jpg')
