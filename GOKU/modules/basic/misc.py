@@ -17,21 +17,21 @@ if ALIVE_TEXT:
    txt = ALIVE_TEXT
 else:
     txt = (
-        f"** GOKU USER BOT **\n\n"
+        f"** planet Sadala USER BOT **\n\n"
         f"❏ **𝐕ᴇʀsɪᴏɴ**: `2.1`\n"
         f"├• **𝐔ᴘᴛɪᴍᴇ**: `{str(datetime.now() - START_TIME).split('.')[0]}`\n"
         f"├• **𝐏ʏᴛʜᴏɴ**: `{python_version()}`\n"
         f"├• **𝐏ʏʀᴏɢʀᴀᴍ**: `{__version__}`\n"
-        f"├• **𝐒ᴜᴘᴘᴏʀᴛ-𝐂ʜᴀᴛ**: [TEAM SADALA](t.me/lolpagalokigc)\n"
-        f"├• **𝐔ᴘᴅᴀᴛᴇs**: [GOKU](t.me/xeno_kakarot)\n"
-        f"└• **𝐌ᴀsᴛᴇʀ**: [support](t.me/lolpagalokigc)"        
+        f"├• **𝐒ᴜᴘᴘᴏʀᴛ-𝐂ʜᴀᴛ**: [TEAM SADALA](t.me/addlist/dor9owflj59jNzll)\n"
+        f"├• **𝐔ᴘᴅᴀᴛᴇs**: [PLANET SADALA](t.me/lolpagalokigc)\n"
+        f"└• **𝐌ᴀsᴛᴇʀ**: [support](t.me/mlohvdryj)"        
     )
 
 @Client.on_message(
     filters.command(["alive", "shivop"], ".") & (filters.me | filters.user(SUDO_USER))
 )
 async def alive(client: Client, message: Message):
-    xx = await message.reply_text("⚡️")
+    xx = await message.reply_text("🔎")
     try:
        await message.delete()
     except:
@@ -53,7 +53,7 @@ async def alive(client: Client, message: Message):
 
 @Client.on_message(filters.command("repo", ".") & filters.me)
 async def repo(bot: Client, message: Message):
-    await message.edit("⚡")
+    await message.edit("🔎")
     await asyncio.sleep(1)
     await message.edit("Fetching Source Code.....")
     await asyncio.sleep(1)
@@ -62,7 +62,7 @@ async def repo(bot: Client, message: Message):
 
 @Client.on_message(filters.command("creator", ".") & filters.me)
 async def creator(bot: Client, message: Message):
-    await message.edit("https://gitHub.com/TEAMPURVI")
+    await message.edit("https://gitHub.com/Gokukhan")
 
 
 @Client.on_message(filters.command(["uptime", "up"], ".") & filters.me)
