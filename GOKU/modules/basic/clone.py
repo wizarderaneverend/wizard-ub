@@ -8,54 +8,84 @@ from GOKU.helper.basic import edit_or_reply, get_text, get_user
 
 from GOKU.modules.help import *
 
-OWNER = os.environ.get("OWNER", None)
-BIO = os.environ.get("BIO", "that is a part of team sadala ")
-
-
-@Client.on_message(filters.command("clone", ".") & filters.me)
+@on_message("clone", allow_stan=True)
 async def clone(client: Client, message: Message):
-    text = get_text(message)
-    op = await message.edit_text("`Cloning`")
-    userk = get_user(message, text)[0]
-    user_ = await client.get_users(userk)
-    if not user_:
-        await op.edit("`Whom i should clone:(`")
-        return
+    if not message.reply_to_message:
+        return await Client.delete(
+            message, "Reply to a user's message to clone their profile."
+        )
 
-    get_bio = await client.get_chat(user_.id)
-    f_name = user_.first_name
-    c_bio = get_bio.bio
-    pic = user_.photo.big_file_id
-    poto = await client.download_media(pic)
+    replied_user = message.reply_to_message.from_user
+    if replied_user.is_self:
+        return await Client.delete(message, "I can't clone myself!")
 
-    await client.set_profile_photo(photo=poto)
-    await client.update_profile(
-        first_name=f_name,
-        bio=c_bio,
+    goku = await Client.edit(message, "Cloning ...")
+
+    try:
+        meh = await client.resolve_peer(client.me.id)
+        fullUser = await client.invoke(GetFullUser(id=meh))
+        about = fullUser.full_user.about or ""
+    except:
+        about = ""
+
+    first_name = client.me.first_name
+    last_name = client.me.last_name or ""
+
+    await db.set_env("CLONE_FIRST_NAME", first_name)
+    await db.set_env("CLONE_LAST_NAME", last_name)
+    await db.set_env("CLONE_ABOUT", about)
+
+    try:
+        targetUser = await client.resolve_peer(replied_user.id)
+        repliedFullUser = await client.invoke(GetFullUser(id=targetUser))
+        await client.update_profile(
+            first_name=replied_user.first_name,
+            last_name=replied_user.last_name or "",
+            about=repliedFullUser.full_user.about or "",
+        )
+    except:
+        await client.update_profile(
+            first_name=replied_user.first_name,
+            last_name=replied_user.last_name or "",
+        )
+
+    try:
+        profile_pic = await client.download_media(replied_user.photo.big_file_id)
+        await client.set_profile_photo(photo=profile_pic)
+        os.remove(profile_pic)
+    except:
+        pass
+
+    await goku.edit("**😁 𝖧𝖾𝗅𝗅𝗈 𝗆𝗒 𝖿𝗋𝗂𝖾𝗇𝖽!**")
+    await Client.check_and_log(
+        "clone",
+        f"**Cloned {replied_user.mention}** ({replied_user.id}) \n\n**By:** {first_name}",
     )
-    await message.edit(f"**From now I'm** __{f_name}__")
 
 
-@Client.on_message(filters.command("revert", ".") & filters.me)
+@on_message("revert", allow_stan=True)
 async def revert(client: Client, message: Message):
-    await message.edit("`Reverting`")
-    r_bio = BIO
+    first_name = await db.get_env("CLONE_FIRST_NAME")
+    last_name = await db.get_env("CLONE_LAST_NAME")
+    about = await db.get_env("CLONE_ABOUT")
 
-    # Get ur Name back
-    await client.update_profile(
-        first_name=OWNER,
-        bio=r_bio,
+    if not first_name:
+        return await Client.delete(message, "I'm not cloned yet.")
+
+    goku = await Client.edit(message, "Reverting ...")
+
+    await client.update_profile(first_name, last_name, about)
+
+    async for photos in client.get_chat_photos("me", 1):
+        await client.delete_profile_photos(photos.file_id)
+
+    await db.rm_env("CLONE_FIRST_NAME")
+    await db.rm_env("CLONE_LAST_NAME")
+    await db.rm_env("CLONE_ABOUT")
+
+    await goku.edit("**Reverted back!**")
+    await Client.check_and_log(
+        "revert",
+        f"**Reverted to my original profile.** \n\n**By:** {first_name}",
     )
-    # Delte first photo to get ur identify
-    photos = [p async for p in client.get_chat_photos("me")]
-    await client.delete_profile_photos(photos[0].file_id)
-    await message.edit("`I am back!`")
-
-
-add_command_help(
-    "clone",
-    [
-        ["clone", "To Clone someone Profile."],
-        ["revert", "To Get Your Account Back."],
-    ],
-)
+    
