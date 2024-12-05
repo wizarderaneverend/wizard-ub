@@ -22,7 +22,7 @@ async def clone(client: Client, message: Message):
     if replied_user.is_self:
         return await message.delete(message, "I can't clone myself!")
 
-    goku = await message.edit_text(message, "Cloning ...")
+        goku = await message.edit_text("`Cloning`")
 
     try:
         meh = await client.resolve_peer(client.me.id)
