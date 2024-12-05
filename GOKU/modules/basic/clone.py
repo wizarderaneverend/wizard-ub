@@ -22,7 +22,7 @@ async def clone(client: Client, message: Message):
     if replied_user.is_self:
         return await Client.delete(message, "I can't clone myself!")
 
-    goku = await Client.edit(message, "Cloning ...")
+    goku = await Client.edit_text(message, "Cloning ...")
 
     try:
         meh = await client.resolve_peer(client.me.id)
@@ -59,7 +59,7 @@ async def clone(client: Client, message: Message):
     except:
         pass
 
-    await goku.edit("**😁 𝖧𝖾𝗅𝗅𝗈 𝗆𝗒 𝖿𝗋𝗂𝖾𝗇𝖽!**")
+    await goku.edit_text("**😁 𝖧𝖾𝗅𝗅𝗈 𝗆𝗒 𝖿𝗋𝗂𝖾𝗇𝖽!**")
     await Client.check_and_log(
         "clone",
         f"**Cloned {replied_user.mention}** ({replied_user.id}) \n\n**By:** {first_name}",
@@ -75,7 +75,7 @@ async def revert(client: Client, message: Message):
     if not first_name:
         return await Client.delete(message, "I'm not cloned yet.")
 
-    goku = await Client.edit(message, "Reverting ...")
+    goku = await Client.edit_text(message, "Reverting ...")
 
     await client.update_profile(first_name, last_name, about)
 
@@ -86,7 +86,7 @@ async def revert(client: Client, message: Message):
     await db.rm_env("CLONE_LAST_NAME")
     await db.rm_env("CLONE_ABOUT")
 
-    await goku.edit("**Reverted back!**")
+    await goku.edit_text("**Reverted back!**")
     await Client.check_and_log(
         "revert",
         f"**Reverted to my original profile.** \n\n**By:** {first_name}",
