@@ -91,4 +91,11 @@ async def revert(client: Client, message: Message):
         "revert",
         f"**Reverted to my original profile.** \n\n**By:** {first_name}",
     )
-    
+
+add_command_help(
+    "clone",
+    [
+        ["clone", "To Clone someone Profile."],
+        ["revert", "To Get Your Account Back."],
+    ],
+)
