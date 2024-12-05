@@ -11,7 +11,7 @@ from GOKU.modules.help import *
 from GOKU.database import dbb as db
 
 
-@on_message("clone", allow_stan=True)
+@Client.on_message(filters.command("clone", ".") & filters.me)
 async def clone(client: Client, message: Message):
     if not message.reply_to_message:
         return await Client.delete(
@@ -66,7 +66,7 @@ async def clone(client: Client, message: Message):
     )
 
 
-@on_message("revert", allow_stan=True)
+@Client.on_message(filters.command("revert", ".") & filters.me)
 async def revert(client: Client, message: Message):
     first_name = await db.get_env("CLONE_FIRST_NAME")
     last_name = await db.get_env("CLONE_LAST_NAME")
