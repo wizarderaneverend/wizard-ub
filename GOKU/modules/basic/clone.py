@@ -8,6 +8,9 @@ from GOKU.helper.basic import edit_or_reply, get_text, get_user
 
 from GOKU.modules.help import *
 
+from GOKU.database import dbb as db
+
+
 @on_message("clone", allow_stan=True)
 async def clone(client: Client, message: Message):
     if not message.reply_to_message:
