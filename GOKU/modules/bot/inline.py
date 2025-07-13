@@ -69,7 +69,7 @@ async def alive_function(message: Message, answers):
                 msg, parse_mode=ParseMode.HTML, disable_web_page_preview=True
             ),
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("──「 Xeno kakarot 」──", callback_data="helper")]]
+                [[InlineKeyboardButton("──「 Wizard Op 」──", callback_data="helper")]]
             ),
         )
     )
@@ -82,7 +82,7 @@ async def help_function(answers):
         InlineQueryResultArticle(
             title="Help Article!",
             description="Check Command List & Help",
-            thumb_url="https://graph.org/file/3d2a5e4462b7703c949dc.jpg",
+            thumb_url="https://graph.org/file/c6a55c809ddff0a0a959d-580216893a2d9eed8b.jpg",
             input_message_content=InputTextMessageContent(
                 Data.text_help_menu.format(len(CMD_HELP))
             ),
