@@ -27,7 +27,7 @@ async def dmraid(xspam: Client, e: Message):
                 text = f"Chal Chal baap Ko mat sikha"
                 await e.reply_text(text)
           elif int(id) in SUDO_USERS:
-                text = f"Abe Lawde that guy part of @xeno_kakarot."
+                text = f"Abe Lawde that guy part of @WIZARD_ERA_NEVER_END."
                 await e.reply_text(text)
           else:
               counts = int(GOKU[0])
