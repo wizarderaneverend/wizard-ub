@@ -11,7 +11,7 @@ from GOKU.helper.PyroHelpers import ReplyCheck
 from GOKU.modules.help import add_command_help
 from GOKU.modules.bot.inline import get_readable_time
 
-alive_logo = ALIVE_PIC or "https://graph.org/file/c6a2ed96648fd03377dc9.jpg"
+alive_logo = ALIVE_PIC or "https://graph.org/file/7a66039fc6a096eb261e7-978dd1f1d2a0019152.jpg"
 
 if ALIVE_TEXT:
    txt = ALIVE_TEXT
